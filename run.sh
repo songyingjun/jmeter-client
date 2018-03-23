@@ -22,7 +22,7 @@ treport="/home/core/nginx/html/jmetertest/report"
 cmd5="ssh -i hostkey -o \"StrictHostKeyChecking no\"  core@${ENV_PROXY_IP} \"[ -d ${treport}/ ] && echo ok || mkdir -p ${treport}/\""
 eval ${cmd5}
 
-cmd7="scp -i hostkey -o \"StrictHostKeyChecking no\"  -r ${ENV_JMX_FILE_NAME}_${now} core@${ENV_PROXY_IP}:${treport}/"
+cmd7="scp -r ${ENV_JMX_FILE_NAME}_${now} -i hostkey -o \"StrictHostKeyChecking no\"  core@${ENV_PROXY_IP}:${treport}/"
 eval ${cmd6}
 
 echo "=====End JMeter Test ${ENV_JMX_FILE_NAME} on $now"

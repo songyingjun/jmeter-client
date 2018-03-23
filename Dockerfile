@@ -12,4 +12,4 @@ RUN chmod 600 /hostkey
 COPY dev2-login.jmx /
 WORKDIR	/
 
-ENTRYPOINT ["/run.sh"]
+CMD ["bash", "/run.sh"]
